@@ -6,7 +6,9 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
 		replier.reply("Hello, World!");
 	} else if (msg == '!ping') {
         	replier.reply("!pong "+room);
-    	} else if (msg.startsWith("!clone")) {
+    } else if (msg.startsWith("!clone")) {
     		replier.reply(msg.slice("!clone".length));
+	} else if (msg == "!!") { // by SYH
+		replier.reply("!!")
 	}
 }
